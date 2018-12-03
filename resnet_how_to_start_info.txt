@@ -1,0 +1,15 @@
+ResNet Quickstart
+
+
+Once you have everything installed, this is all you have to do in the shell:
+
+
+
+. ./tf_client_venv/bin/activate
+
+
+docker run --rm -p 8501:8501 --name tfserving_resnet --mount type=bind,source=$HOME/tmp/resnet,target=/models/resnet -e MODEL_NAME=resnet -t tensorflow/serving &
+
+
+
+jupyter-notebook
